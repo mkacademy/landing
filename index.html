@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="MK Academy — learning platform, CMS, media, and GraphQL warehouse API."
+      content="MK Academy — studio authoring, read-only images viewer, video pipeline, and GraphQL warehouse API."
     />
     <title>MK Academy — Platform Overview</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +26,7 @@
       <div class="wrap">
         <a class="logo" href="#">MK Academy</a>
         <nav class="nav" aria-label="Primary">
-          <a href="#platform">Platform</a>
-          <a href="#cms">CMS</a>
+          <a href="#studio">Studio</a>
           <a href="#images">Images</a>
           <a href="#videos">Videos</a>
           <a href="#architecture">Architecture</a>
@@ -40,11 +39,11 @@
       <section class="hero">
         <div class="wrap">
           <p class="hero-badge">mkacademy.ca ecosystem</p>
-          <h1>Learn, author, and deliver <span>PNC content</span> at scale</h1>
+          <h1>Author, browse, and deliver <span>PNC content</span> at scale</h1>
           <p class="hero-lead">
-            MK Academy connects a student-facing learning experience, editorial CMS,
-            read-only image viewer, and video pipeline—unified behind a gateway API and
-            GraphQL warehouse.
+            MK Academy splits into focused repos: a studio for editorial work, a read-only
+            images viewer for learners, and a dedicated video pipeline—unified behind a
+            gateway API and GraphQL warehouse.
           </p>
           <div class="hero-cta">
             <a class="btn btn--primary" href="https://mkacademy.ca" target="_blank" rel="noopener noreferrer"
@@ -55,56 +54,15 @@
         </div>
       </section>
 
-      <section id="platform">
-        <div class="wrap">
-          <p class="section-label">Platform</p>
-          <h2 class="section-title">MK Academy learning experience</h2>
-          <p class="section-desc">
-            The main frontend delivers structured courses, hands-on tutorials, and
-            interactive quizzes. Progress and analytics flow through Redux middleware;
-            content is resolved from routes and served via the warehouse GraphQL API.
-          </p>
-          <div class="grid">
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">📚</div>
-              <h3>Courses &amp; tutorials</h3>
-              <p>
-                Guided paths with rich lesson content, navigation, and stateful quiz flows
-                tied to request IDs and route matchers.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">✅</div>
-              <h3>Quizzes</h3>
-              <p>
-                Client-side quiz utilities and slices power attempts, scoring, and stats
-                middleware for a responsive assessment loop.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">◈</div>
-              <h3>GraphQL warehouse API</h3>
-              <p>
-                Central data layer behind the gateway: content, metadata, and operational
-                queries consumed by all frontends.
-              </p>
-              <div class="card-links">
-                <a class="chip" href="https://mkacademy.ca" target="_blank" rel="noopener noreferrer"
-                  >Production</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="cms">
+      <section id="studio">
         <div class="wrap">
           <p class="section-label">Authoring</p>
-          <h2 class="section-title">CMS — cms.mkacademy.ca</h2>
+          <h2 class="section-title">Studio — cms.mkacademy.ca</h2>
           <p class="section-desc">
             Editorial workspace for creating and maintaining PNC content: convolutions,
-            tabulator-driven tables, and stash workflows for draft → publish pipelines.
+            tabulator-driven tables, keyboard-driven shortcuts, and stash workflows for
+            draft → publish pipelines. Media player and prepper tools live in the
+            sibling <strong>videos</strong> repo.
           </p>
           <div class="grid">
             <article class="card">
@@ -141,18 +99,36 @@
       <section id="images">
         <div class="wrap">
           <p class="section-label">Viewer</p>
-          <h2 class="section-title">Images / Viewer</h2>
+          <h2 class="section-title">Images — mkacademy.ca</h2>
           <p class="section-desc">
-            Read-only access to PNC image content on mkacademy.ca—optimized for browsing,
-            zoom, and delivery without write paths from the public app.
+            Read-only public experience for published PNC content: structured courses,
+            hands-on tutorials, and interactive quizzes. Progress and analytics flow
+            through Redux middleware; content is resolved from routes and served via the
+            warehouse GraphQL API.
           </p>
           <div class="grid">
             <article class="card">
-              <div class="card-icon" aria-hidden="true">🖼️</div>
-              <h3>Read-only PNC content</h3>
+              <div class="card-icon" aria-hidden="true">📚</div>
+              <h3>Courses &amp; tutorials</h3>
               <p>
-                Consumes warehouse-backed assets with a focused viewer UX separate from CMS
-                authoring.
+                Guided paths with rich lesson content, navigation, and stateful quiz flows
+                tied to request IDs and route matchers.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">✅</div>
+              <h3>Quizzes</h3>
+              <p>
+                Client-side quiz utilities and slices power attempts, scoring, and stats
+                middleware for a responsive assessment loop.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🖼️</div>
+              <h3>Read-only PNC viewer</h3>
+              <p>
+                Consumes warehouse-backed assets with a focused viewer UX—no write paths
+                from the public app.
               </p>
               <div class="card-links">
                 <a class="chip" href="https://mkacademy.ca" target="_blank" rel="noopener noreferrer"
@@ -169,11 +145,12 @@
           <p class="section-label">Media</p>
           <h2 class="section-title">Videos</h2>
           <p class="section-desc">
-            Dedicated video frontend: media player and prepper pipeline with chunked
-            Media Source Extensions (MSE), FFmpeg transcoding, and adaptive delivery.
+            Standalone media app split from studio: player UI and prepper workflow for
+            ingest and packaging, with chunked Media Source Extensions (MSE), FFmpeg
+            transcoding, and adaptive delivery.
           </p>
           <ul class="feature-list">
-            <li>Player UI with prepper workflow for ingest and packaging</li>
+            <li>Media player and prepper routes for course and tutorial pipelines</li>
             <li>Chunked streaming via MSE for smooth playback</li>
             <li>FFmpeg-based transforms and format normalization</li>
           </ul>
@@ -183,19 +160,15 @@
       <section id="architecture">
         <div class="wrap">
           <p class="section-label">System design</p>
-          <h2 class="section-title">Four frontends + gateway API</h2>
+          <h2 class="section-title">Three apps + gateway API</h2>
           <p class="section-desc">
-            Each surface is an independent deployable frontend. All traffic for data and
-            operations routes through the gateway into the GraphQL warehouse and backing
-            services.
+            Studio, images, and videos are independent deployable frontends. All traffic
+            for data and operations routes through the gateway into the GraphQL warehouse
+            and backing services. This landing site is a static overview of the stack.
           </p>
           <div class="arch-diagram">
             <div class="arch-node">
-              <strong>Learning</strong>
-              <span>Courses, quizzes, tutorials</span>
-            </div>
-            <div class="arch-node">
-              <strong>CMS</strong>
+              <strong>Studio</strong>
               <span>Authoring &amp; stash</span>
             </div>
             <div class="arch-node">
@@ -221,7 +194,8 @@
           <p class="section-label">Source &amp; deploy</p>
           <h2 class="section-title">Repositories &amp; production URLs</h2>
           <p class="section-desc">
-            Open source repos and live endpoints across the MK Academy stack.
+            Four sibling repos on Desktop—landing, studio, videos, and images—plus live
+            endpoints across the MK Academy stack.
           </p>
           <div class="grid">
             <article class="card">
@@ -238,12 +212,12 @@
               </div>
             </article>
             <article class="card">
-              <h3>CMS</h3>
+              <h3>Studio</h3>
               <p>Authoring application for cms.mkacademy.ca.</p>
               <div class="card-links">
                 <a
                   class="chip"
-                  href="https://github.com/mkacademy/cms"
+                  href="https://github.com/mkacademy/studio"
                   target="_blank"
                   rel="noopener noreferrer"
                   >GitHub</a
@@ -259,7 +233,7 @@
             </article>
             <article class="card">
               <h3>Images</h3>
-              <p>Viewer frontend for PNC imagery.</p>
+              <p>Read-only viewer frontend for mkacademy.ca.</p>
               <div class="card-links">
                 <a
                   class="chip"
@@ -275,7 +249,7 @@
             </article>
             <article class="card">
               <h3>Videos</h3>
-              <p>Media player and video prepper stack.</p>
+              <p>Standalone media player and prepper stack.</p>
               <div class="card-links">
                 <a
                   class="chip"
