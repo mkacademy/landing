@@ -1,0 +1,9 @@
+{
+  "name": "mkacademy-landing",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npx serve . -p 4000",
+    "preview": "npx serve . -p 4000"
+  }
+}
