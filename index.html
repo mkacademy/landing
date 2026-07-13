@@ -31,8 +31,6 @@
           <a href="#studio">Studio</a>
           <a href="#images">Images</a>
           <a href="#videos">Videos</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#repos">Repos</a>
         </nav>
       </div>
     </header>
@@ -45,22 +43,22 @@
           <p class="hero-lead">
             MK Academy splits into focused apps on dedicated subdomains—Studio for
             editorial work, Images for read-only viewing, and Videos for media prep and
-            playback—all unified behind a gateway API and GraphQL warehouse.
+            playback—all unified behind a gateway API and GraphQL.
           </p>
           <div class="hero-cta">
             <a
               class="btn btn--primary"
-              href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Open Studio</a
-            >
-            <a
-              class="btn btn--ghost"
               href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
               target="_blank"
               rel="noopener noreferrer"
-              >Browse Images</a
+              >Open Images</a
+            >
+            <a
+              class="btn btn--ghost"
+              href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Browse Studio</a
             >
           </div>
         </div>
@@ -181,137 +179,11 @@
           </div>
         </div>
       </section>
-
-      <section id="architecture">
-        <div class="wrap">
-          <p class="section-label">System design</p>
-          <h2 class="section-title">Four surfaces + gateway API</h2>
-          <p class="section-desc">
-            Landing, Studio, Images, and Videos are independent deployable frontends. All
-            traffic for data and operations routes through the gateway into the GraphQL
-            warehouse and backing services. This page at mkacademy.ca is the static
-            overview of the stack.
-          </p>
-          <div class="arch-diagram">
-            <div class="arch-node">
-              <strong>Landing</strong>
-              <span>mkacademy.ca overview</span>
-            </div>
-            <div class="arch-node">
-              <strong>Studio</strong>
-              <span>Authoring &amp; stash</span>
-            </div>
-            <div class="arch-node">
-              <strong>Images</strong>
-              <span>Read-only viewer</span>
-            </div>
-            <div class="arch-node">
-              <strong>Videos</strong>
-              <span>Player / MSE / FFmpeg</span>
-            </div>
-            <div class="arch-gateway">
-              <div class="arch-node">
-                <strong>Gateway API → GraphQL warehouse</strong>
-                <span>Shared auth, routing, and content graph for all clients</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="repos" class="repos">
-        <div class="wrap">
-          <p class="section-label">Source &amp; deploy</p>
-          <h2 class="section-title">Repositories &amp; production URLs</h2>
-          <p class="section-desc">
-            Four sibling repos—landing, studio, videos, and images—plus live endpoints
-            across the MK Academy stack.
-          </p>
-          <div class="grid">
-            <article class="card">
-              <h3>Landing</h3>
-              <p>Static overview served at mkacademy.ca.</p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://github.com/mkacademy/landing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-                <a class="chip" href="https://mkacademy.ca" target="_blank" rel="noopener noreferrer"
-                  >Production</a
-                >
-              </div>
-            </article>
-            <article class="card">
-              <h3>Studio</h3>
-              <p>Authoring application for studio.mkacademy.ca.</p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://github.com/mkacademy/studio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-                <a
-                  class="chip"
-                  href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Production</a
-                >
-              </div>
-            </article>
-            <article class="card">
-              <h3>Images</h3>
-              <p>Read-only viewer frontend for images.mkacademy.ca.</p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://github.com/mkacademy/images"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-                <a
-                  class="chip"
-                  href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Production</a
-                >
-              </div>
-            </article>
-            <article class="card">
-              <h3>Videos</h3>
-              <p>Standalone media player and prepper stack for videos.mkacademy.ca.</p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://github.com/mkacademy/videos"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-                <a
-                  class="chip"
-                  href="https://videos.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Production</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>MK Academy — static overview. Deploy from the <code>landing</code> repository.</p>
+        <p>MK Academy — static overview.</p>
       </div>
     </footer>
   </body>

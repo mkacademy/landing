@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "npx serve . -p 4000",
+    "dev": "node scripts/dev-server.mjs",
     "preview": "npx serve . -p 4000"
   }
 }

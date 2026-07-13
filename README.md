@@ -8,7 +8,7 @@ Static marketing site for the MK Academy platform. Serve `index.html` from any s
 npm run dev
 ```
 
-Opens at http://localhost:4000.
+Opens at http://localhost:4000. In dev, links to `studio.mkacademy.ca`, `images.mkacademy.ca`, and `videos.mkacademy.ca` are rewritten to the local ports below (`http://localhost:3000`, etc.). Production deploys serve `index.html` unchanged via `npm run preview` or any static host.
 
 ## Local dev ports (all four repos)
 
