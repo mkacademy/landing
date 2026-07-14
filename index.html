@@ -1,190 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="MK Academy — landing hub for Studio (authoring), Images (PNC viewer), Videos (media pipeline), and the shared GraphQL warehouse API."
-    />
-    <title>MK Academy — Platform Overview</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="mesh-bg" aria-hidden="true">
-      <div class="mesh-orb mesh-orb--cyan"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="MK Academy — landing hub for Studio (authoring), Images (PNC viewer), Videos (media pipeline), and the shared GraphQL warehouse API." />
+  <title>MK Academy — Platform Overview</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="mesh-bg" aria-hidden="true">
+    <div class="mesh-orb mesh-orb--cyan"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#">MK Academy</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#images">Images</a>
+        <a href="#videos">Videos</a>
+        <a href="#studio">Studio</a>
+      </nav>
     </div>
+  </header>
 
-    <header class="site-header">
+  <main>
+    <section class="hero">
       <div class="wrap">
-        <a class="logo" href="#">MK Academy</a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#studio">Studio</a>
-          <a href="#images">Images</a>
-          <a href="#videos">Videos</a>
-        </nav>
+        <p class="hero-badge">mkacademy.ca ecosystem</p>
+        <h1>Author, browse, and deliver <span>PNC content</span> at scale</h1>
+        <p class="hero-lead">
+          MK Academy splits into focused apps on dedicated subdomains—Studio for
+          editorial work, Images for read-only viewing, and Videos for media prep and
+          playback—all unified behind a gateway API and GraphQL.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
+            target="_blank" rel="noopener noreferrer">Open Images</a>
+          <a class="btn btn--ghost" href="https://videos.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
+            target="_blank" rel="noopener noreferrer">Browse Videos</a>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div class="wrap">
-          <p class="hero-badge">mkacademy.ca ecosystem</p>
-          <h1>Author, browse, and deliver <span>PNC content</span> at scale</h1>
-          <p class="hero-lead">
-            MK Academy splits into focused apps on dedicated subdomains—Studio for
-            editorial work, Images for read-only viewing, and Videos for media prep and
-            playback—all unified behind a gateway API and GraphQL.
-          </p>
-          <div class="hero-cta">
-            <a
-              class="btn btn--primary"
-              href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Open Images</a
-            >
-            <a
-              class="btn btn--ghost"
-              href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Browse Studio</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section id="studio">
-        <div class="wrap">
-          <p class="section-label">Authoring</p>
-          <h2 class="section-title">Studio — studio.mkacademy.ca</h2>
-          <p class="section-desc">
-            Editorial workspace for creating and maintaining PNC content: convolutions,
-            tabulator-driven tables, keyboard-driven shortcuts, and stash workflows for
-            draft → publish pipelines. Media player and prepper tools live in the
-            sibling <strong>videos</strong> repo.
-          </p>
-          <div class="grid">
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">✏️</div>
-              <h3>Authoring</h3>
-              <p>Structured editing for lessons, assets, and metadata synced to the warehouse.</p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">🧩</div>
-              <h3>Convolutions &amp; tabulator</h3>
-              <p>
-                Specialized editors and grid UIs for complex content shapes and bulk
-                operations.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">📦</div>
-              <h3>Stash workflows</h3>
-              <p>Stage changes safely before promotion to production-facing surfaces.</p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >studio.mkacademy.ca</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="images">
-        <div class="wrap">
-          <p class="section-label">Viewer</p>
-          <h2 class="section-title">Images — images.mkacademy.ca</h2>
-          <p class="section-desc">
-            Read-only public experience for published PNC content: structured courses,
-            hands-on tutorials, and interactive quizzes. Progress and analytics flow
-            through Redux middleware; content is resolved from routes and served via the
-            warehouse GraphQL API.
-          </p>
-          <div class="grid">
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">📚</div>
-              <h3>Courses &amp; tutorials</h3>
-              <p>
-                Guided paths with rich lesson content, navigation, and stateful quiz flows
-                tied to request IDs and route matchers.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">✅</div>
-              <h3>Quizzes</h3>
-              <p>
-                Client-side quiz utilities and slices power attempts, scoring, and stats
-                middleware for a responsive assessment loop.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-icon" aria-hidden="true">🖼️</div>
-              <h3>Read-only PNC viewer</h3>
-              <p>
-                Consumes warehouse-backed assets with a focused viewer UX—no write paths
-                from the public app.
-              </p>
-              <div class="card-links">
-                <a
-                  class="chip"
-                  href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >images.mkacademy.ca</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="videos">
-        <div class="wrap">
-          <p class="section-label">Media</p>
-          <h2 class="section-title">Videos — videos.mkacademy.ca</h2>
-          <p class="section-desc">
-            Standalone media app split from studio: player UI and prepper workflow for
-            ingest and packaging, with chunked Media Source Extensions (MSE), FFmpeg
-            transcoding, and adaptive delivery.
-          </p>
-          <ul class="feature-list">
-            <li>Media player and prepper routes for course and tutorial pipelines</li>
-            <li>Chunked streaming via MSE for smooth playback</li>
-            <li>FFmpeg-based transforms and format normalization</li>
-          </ul>
-          <div class="card-links" style="margin-top: 1.5rem">
-            <a
-              class="chip"
-              href="https://videos.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out"
-              target="_blank"
-              rel="noopener noreferrer"
-              >videos.mkacademy.ca</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
+    <section id="images">
       <div class="wrap">
-        <p>MK Academy — static overview.</p>
+        <p class="section-label">Viewer</p>
+        <h2 class="section-title">Images — images.mkacademy.ca</h2>
+        <p class="section-desc">
+          Read-only public experience for published PNC content: structured courses,
+          hands-on tutorials, and interactive quizzes. Progress and analytics flow
+          through Redux middleware; content is resolved from routes and served via the
+          warehouse GraphQL API.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <h3>Courses &amp; tutorials</h3>
+            <p>
+              Guided paths with rich lesson content, navigation, and stateful quiz flows
+              tied to request IDs and route matchers.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✅</div>
+            <h3>Quizzes</h3>
+            <p>
+              Client-side quiz utilities and slices power attempts, scoring, and stats
+              middleware for a responsive assessment loop.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🖼️</div>
+            <h3>Read-only PNC viewer</h3>
+            <p>
+              Consumes warehouse-backed assets with a focused viewer UX—no write paths
+              from the public app.
+            </p>
+            <div class="card-links">
+              <a class="chip" href="https://images.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out" target="_blank"
+                rel="noopener noreferrer">images.mkacademy.ca</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="videos">
+      <div class="wrap">
+        <p class="section-label">Media</p>
+        <h2 class="section-title">Videos — videos.mkacademy.ca</h2>
+        <p class="section-desc">
+          Standalone media app split from studio: player UI and prepper workflow for
+          ingest and packaging, with chunked Media Source Extensions (MSE), FFmpeg
+          transcoding, and adaptive delivery.
+        </p>
+        <ul class="feature-list">
+          <li>Media player and prepper routes for course and tutorial pipelines</li>
+          <li>Chunked streaming via MSE for smooth playback</li>
+          <li>FFmpeg-based transforms and format normalization</li>
+        </ul>
+        <div class="card-links" style="margin-top: 1.5rem">
+          <a class="chip" href="https://videos.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out" target="_blank"
+            rel="noopener noreferrer">videos.mkacademy.ca</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio">
+      <div class="wrap">
+        <p class="section-label">Authoring</p>
+        <h2 class="section-title">Studio — studio.mkacademy.ca</h2>
+        <p class="section-desc">
+          Editorial workspace for creating and maintaining PNC content: convolutions,
+          tabulator-driven tables, keyboard-driven shortcuts, and stash workflows for
+          draft → publish pipelines. Media player and prepper tools live in the
+          sibling <strong>videos</strong> repo.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✏️</div>
+            <h3>Authoring</h3>
+            <p>Structured editing for lessons, assets, and metadata synced to the warehouse.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧩</div>
+            <h3>Convolutions &amp; tabulator</h3>
+            <p>
+              Specialized editors and grid UIs for complex content shapes and bulk
+              operations.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📦</div>
+            <h3>Stash workflows</h3>
+            <p>Stage changes safely before promotion to production-facing surfaces.</p>
+            <div class="card-links">
+              <a class="chip" href="https://studio.mkacademy.ca/?tutorials=4229&tutorial=4228&unzip=out" target="_blank"
+                rel="noopener noreferrer">studio.mkacademy.ca</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>MK Academy — static overview.</p>
+    </div>
+  </footer>
+</body>
+
 </html>
