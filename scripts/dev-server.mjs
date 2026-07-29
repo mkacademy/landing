@@ -39,9 +39,14 @@ function rewriteAnchorsForDev(html) {
     );
   }
 
+  // Replace content deep-links (tutorials/…) with DEV_QUERY.
+  // Bare origins and other queries (e.g. ?s=v) are left as-is.
   for (const appPort of Object.values(apps)) {
     out = out.replaceAll(
-      new RegExp(`(href="http://localhost:${appPort})[^"]*"`, "g"),
+      new RegExp(
+        `(href="http://localhost:${appPort})/?\\?[^"]*\\btutorials=[^"]*"`,
+        "g",
+      ),
       `$1${devQuery}"`,
     );
   }
