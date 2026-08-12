@@ -13,10 +13,6 @@ const apps = {
   videos: Number(process.env.VIDEOS_PORT) || 3002,
 };
 
-const devQuery =
-  process.env.DEV_QUERY ||
-  "?tutorials=1099&courses=1100&Quizzes=1101&unzip=out-out-out&ran=I";
-
 const mime = {
   ".css": "text/css",
   ".html": "text/html; charset=utf-8",
@@ -36,18 +32,6 @@ function rewriteAnchorsForDev(html) {
     out = out.replaceAll(
       new RegExp(`>\\s*${prodHost}\\s*</a`, "gi"),
       `>${localHost}</a`,
-    );
-  }
-
-  // Replace content deep-links (tutorials/…) with DEV_QUERY.
-  // Bare origins and other queries (e.g. ?s=v) are left as-is.
-  for (const appPort of Object.values(apps)) {
-    out = out.replaceAll(
-      new RegExp(
-        `(href="http://localhost:${appPort})/?\\?[^"]*\\btutorials=[^"]*"`,
-        "g",
-      ),
-      `$1${devQuery}"`,
     );
   }
 
@@ -77,6 +61,6 @@ server.listen(port, () => {
   console.log(`Landing dev server: http://localhost:${port}`);
   console.log("Anchor rewrites:");
   for (const [sub, appPort] of Object.entries(apps)) {
-    console.log(`  ${sub}.mkacademy.ca → http://localhost:${appPort}${devQuery}`);
+    console.log(`  ${sub}.mkacademy.ca → http://localhost:${appPort}`);
   }
 });
