@@ -397,6 +397,16 @@ section {
   color: var(--text-muted);
 }
 
+.footer-link {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
